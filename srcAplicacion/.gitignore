@@ -1,0 +1,13 @@
+# compiled source #
+###################
+
+*.apk
+*.dex
+*.class
+*.exe
+*.o
+*.o.d
+
+# swaps de vim #
+################
+*.swp

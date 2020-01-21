@@ -1,0 +1,250 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+<RelativeLayout    android:id="@+id/relativeLayoutInformacion"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Informacion"
+     >
+
+    <TextView
+        android:id="@+id/nmbCancion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Archivo"
+     />
+     
+    <TextView
+        android:id="@+id/txtChannels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nmbCancion"
+        android:text="" />
+     
+    <TextView
+        android:id="@+id/txtSamplesPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChannels"
+        android:text="" />
+     
+    <TextView
+        android:id="@+id/txtAvgBytesPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSamplesPS"
+        android:text="" />
+     
+    <TextView
+        android:id="@+id/txtBitsPerSample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAvgBytesPS"
+        android:text="" />
+     
+    <TextView
+        android:id="@+id/txtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBitsPerSample"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txtRRT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_below="@id/txtDuration"
+        android:text="Refresh Rate:" />
+
+    <SeekBar
+        android:id="@+id/refreshAn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRRT"
+        android:max="16" />
+
+    <TextView
+        android:id="@+id/txtRA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refreshAn"
+        android:text="Threshold Analizador:" />
+
+    <SeekBar
+        android:id="@+id/thresholdAn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/dbRA"
+        android:max="60"
+        android:layout_below="@id/txtRA" />
+
+     <TextView
+        android:id="@+id/dbRA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/thresholdAn"
+        android:text="-15 db" />
+
+   <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"
+        android:layout_below="@id/thresholdAn" />
+     
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnPlay"
+        android:layout_alignBottom="@id/btnPlay"
+        android:layout_toRightOf="@id/btnPlay"
+        android:text="@string/stop" />
+
+     <Button
+        android:id="@+id/btnEqOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnPlay"
+        android:layout_toRightOf="@id/btnStop"
+        android:text="@string/eqonoff" />
+  
+     <TextView
+        android:id="@+id/txtEcu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlay"
+        android:layout_alignRight="@+id/txtEcu2"
+        android:layout_marginTop="20px"
+        android:text="   64 Hz:" />
+
+    <TextView
+        android:id="@+id/txtEcu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtEcu3"
+        android:layout_below="@id/txtEcu1"
+        android:text="  256 Hz:" />
+
+    <TextView
+        android:id="@+id/txtEcu3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtEcu4"
+        android:layout_below="@id/txtEcu2"
+        android:text=" 1024 Hz:" />
+
+    
+    <TextView
+        android:id="@+id/txtEcu4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEcu3"
+        android:layout_alignRight="@+id/txtEcu5"
+        android:text=" 4096 Hz:" />
+
+    
+    <TextView
+        android:id="@+id/txtEcu5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEcu4"
+        android:text="16384 Hz:" />
+
+
+    <SeekBar
+        android:id="@+id/ecu_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="60"
+        android:layout_alignBottom="@id/txtEcu1"
+        android:layout_toRightOf="@id/txtEcu1"
+        android:layout_toLeftOf="@+id/dbEcu1" />
+
+    <SeekBar
+        android:id="@+id/ecu_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="60"
+        android:layout_alignBottom="@id/txtEcu2"
+        android:layout_toRightOf="@id/txtEcu2"
+        android:layout_toLeftOf="@+id/dbEcu2" />
+
+   <SeekBar
+        android:id="@+id/ecu_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="60"
+        android:layout_alignBottom="@id/txtEcu3"
+        android:layout_toRightOf="@id/txtEcu3"
+        android:layout_toLeftOf="@+id/dbEcu3"/>
+
+   <SeekBar
+        android:id="@+id/ecu_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="60"
+        android:layout_alignBottom="@id/txtEcu4"
+        android:layout_toRightOf="@id/txtEcu4"
+        android:layout_toLeftOf="@+id/dbEcu4" />
+
+   <SeekBar
+        android:id="@+id/ecu_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="60"
+        android:layout_alignBottom="@id/txtEcu5"
+        android:layout_toRightOf="@id/txtEcu5"
+        android:layout_toLeftOf="@+id/dbEcu5" />
+
+    <TextView
+        android:id="@+id/dbEcu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/txtEcu1"
+        android:text="-0.0 db" />
+
+     <TextView
+        android:id="@+id/dbEcu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtEcu2"
+        android:layout_alignParentRight="true"
+        android:text="-0.0 db" />
+
+     <TextView
+        android:id="@+id/dbEcu3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtEcu3"
+        android:layout_alignParentRight="true"
+        android:text="-0.0 db" />
+
+     <TextView
+        android:id="@+id/dbEcu4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtEcu4"
+        android:layout_alignParentRight="true"
+        android:text="-0.0 db" />
+
+     <TextView
+        android:id="@+id/dbEcu5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtEcu5"
+        android:layout_alignParentRight="true"
+        android:text="-0.0 db" />
+
+   
+</RelativeLayout>
+
+</ScrollView>

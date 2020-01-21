@@ -1,0 +1,4 @@
+set solib-search-path ./obj/local/armeabi-v7a
+directory /home/lui/android/android-ndk-r9c/platforms/android-16/arch-arm/usr/include /home/lui/android/android-ndk-r9c/sources/android-ndk-profiler jni /home/lui/android/android-ndk-r9c/sources/cxx-stl/system
+file ./obj/local/armeabi-v7a/app_process
+target remote :5039
